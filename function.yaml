@@ -25,6 +25,8 @@ spec:
     template:
       name: azure-runtime
       arguments:
+      - name: SKIP_TLS_VERIFY
+        value: true
       - name: TAG
         value: 0.0.1
       - name: IMAGE
