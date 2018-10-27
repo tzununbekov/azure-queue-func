@@ -3,6 +3,13 @@ source:
     url: https://github.com/sebgoa/azure-queue-func.git
     revision: master
 steps:
+- name: kubectl
+  image: gcr.io/cloud-builders/kubectl
+  args:
+  - kubectl
+  - apply
+  - -f
+  - function.yaml
 - name: deploy
   image: gcr.io/triggermesh/tm
   args:
