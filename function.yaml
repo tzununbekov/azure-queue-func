@@ -16,7 +16,6 @@ apiVersion: serving.knative.dev/v1alpha1
 kind: Configuration
 metadata:
   name: azure-runtime-example-function
-  namespace: default
 spec:
   build:
     source:
@@ -26,8 +25,6 @@ spec:
     template:
       name: azure-runtime
       arguments:
-      - name: DIRECTORY
-        value: ./foo
       - name: IMAGE
         value: knative-local-registry:5000/sebgoa/queue
   revisionTemplate:
