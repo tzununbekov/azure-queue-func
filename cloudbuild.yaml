@@ -1,0 +1,20 @@
+source:
+  git:
+    url: https://github.com/sebgoa/azure-queue-func.git
+    revision: master
+steps:
+- name: deploy
+  image: gcr.io/triggermesh/tm
+  args:
+  - tm 
+  - "-n"
+  - sebgoa
+  - "--registry-host"
+  - unauthenticated.registry.svc.cluster.local/sebgoa 
+  - deploy
+  - service
+  - azure-queue 
+  - "--from-source"
+  - https://github.com/sebgoa/azure-queue-func.git 
+  - "--build-template"
+  - azure-runtime 
