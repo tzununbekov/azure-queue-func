@@ -25,12 +25,14 @@ spec:
     template:
       name: azure-runtime
       arguments:
+      - name: TAG
+        value: 0.0.1
       - name: IMAGE
-        value: knative-local-registry:5000/sebgoa/queue
+        value: unauthenticated.registry.svc.cluster.local/sebgoa/queue
   revisionTemplate:
     spec:
       container:
-        image: knative-local-registry:5000/sebgoa/queue
+        image: unauthenticated.registry.svc.cluster.local/sebgoa/queue:0.0.1
         env:
         - name: AzureWebJobsStorage
           valueFrom:
