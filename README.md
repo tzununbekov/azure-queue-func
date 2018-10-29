@@ -11,7 +11,15 @@ func new -t "Queue trigger" --name foo
 
 Edit your queue name in `foo/function.json`
 
-Deploy via a knative configuration
+Store your Azure Storage connetion string in a k8s secret
+
+Make sure that the Azure buildtemplate is created
+
+```
+kubectl apply -f knative-build-template.yaml
+```
+
+Deploy your function via a knative configuration
 
 ```
 kubectl apply -f function.yaml
