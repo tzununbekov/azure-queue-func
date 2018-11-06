@@ -1,6 +1,6 @@
  # Demo of Azure function runtime on knative
 
-This is a demo ...
+This is a demo ... to test stuff
 
 Prep your function
 
