@@ -4,31 +4,16 @@ source:
     revision: master
 steps:
 - name: kubectl
-  image: gcr.io/cloud-builders/kubectl
+  image: lachlanevenson/k8s-kubectl
   args:
   - kubectl
   - apply
   - -f
   - knative-build-template.yaml
 - name: kubectl
-  image: gcr.io/cloud-builders/kubectl
+  image: lachlanevenson/k8s-kubectl
   args:
   - kubectl
   - apply
   - -f
   - function.yaml
-- name: deploy
-  image: gcr.io/triggermesh/tm
-  args:
-  - tm 
-  - "-n"
-  - sebgoa
-  - "--registry-host"
-  - unauthenticated.registry.svc.cluster.local/sebgoa 
-  - deploy
-  - service
-  - azure-queue 
-  - "--from-source"
-  - https://github.com/sebgoa/azure-queue-func.git 
-  - "--build-template"
-  - azure-runtime 
