@@ -30,11 +30,11 @@ spec:
       - name: TAG
         value: 0.0.1
       - name: IMAGE
-        value: unauthenticated.registry.svc.cluster.local/sebgoa/queue
+        value: knative.registry.svc.cluster.local/sebgoa/queue
   revisionTemplate:
     spec:
       container:
-        image: unauthenticated.registry.svc.cluster.local/sebgoa/queue:0.0.1
+        image: knative.registry.svc.cluster.local/sebgoa/queue:0.0.1
         env:
         - name: AzureWebJobsStorage
           valueFrom:
