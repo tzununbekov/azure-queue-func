@@ -33,9 +33,9 @@ spec:
     default: "false"
   steps:
   - name: dockerfile
-    image: gcr.io/kaniko-project/executor:v0.6.0
+    image: busybox
     command:
-    - /busybox/sh
+    - /bin/sh
     args:
     - -c
     - |
