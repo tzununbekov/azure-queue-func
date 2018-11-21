@@ -33,7 +33,7 @@ spec:
     default: "false"
   steps:
   - name: dockerfile
-    image: gcr.io/kaniko-project/executor:debug@sha256:5a8d578dc7ff0114daadb20902bf8529f9a2257440d68ac9c6c4b7da98665ca1
+    image: gcr.io/kaniko-project/executor:v0.6.0
     command:
     - /busybox/sh
     args:
@@ -57,7 +57,7 @@ spec:
       ls -l
       cat Dockerfile
   - name: export
-    image: gcr.io/kaniko-project/executor@sha256:413fe14232a5f37f02a57758fe891993df3d58114ed948b00c9b044ed2f05f45
+    image: gcr.io/kaniko-project/executor:v0.6.0
     args:
     - --context=/workspace/${DIRECTORY}
     - --dockerfile=/workspace/${DIRECTORY}/Dockerfile
