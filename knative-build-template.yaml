@@ -18,6 +18,7 @@ metadata:
   name: azure-runtime
   annotations:
     origin: github.com/triggermesh/azure-runtime
+    dockerfile: busybox
 spec:
   parameters:
   - name: IMAGE
