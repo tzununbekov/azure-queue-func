@@ -43,5 +43,5 @@ spec:
               key: connection
     metadata:
       labels:
-        test: preprod
+        test: foo
         knative.dev/type: "function"
