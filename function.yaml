@@ -43,4 +43,5 @@ spec:
               key: connection
     metadata:
       labels:
+        test: prod
         knative.dev/type: "function"
